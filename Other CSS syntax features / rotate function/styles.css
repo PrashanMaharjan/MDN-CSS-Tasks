@@ -1,0 +1,9 @@
+body {
+  background-color: pink;
+}
+
+@media (width >= 30em) {
+  body {
+    background-color: blue;
+  }
+}
