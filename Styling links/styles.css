@@ -1,0 +1,18 @@
+body {
+  width: 300px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+
+  /* This is a self-contained SVG icon. 
+     It doesn't need to download any files. */
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='M14 2.5a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 0 0 1h2.793L6.146 8.146a.5.5 0 1 0 .708.708L12 3.707V6.5a.5.5 0 0 0 1 0v-4z'/><path d='M12 12.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-3.5v8h8V9.5a.5.5 0 0 1 1 0v3z'/></svg>");
+  background-size: 100%;
+}
