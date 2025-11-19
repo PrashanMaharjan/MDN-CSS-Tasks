@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 0 0 1em;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  border: 5px solid #000;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 1em;
+  border-top: 1px solid #999;
+}
+
+header .title {
+  font-size: 150%;
+  font-style: italic;
+  font-weight: bold;
+  padding: 1em;
+}
+
+main {
+  padding: 0 1em;
+}
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards li {
+  border: 5px solid #000;
+  margin-bottom: 1em;
+}
+
+.cards h2 {
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+.cards .inner {
+  padding: 0.5em 1em;
+}
+
+.sidebar {
+  background-color: #333;
+  border: 5px solid #000;
+  padding: 0.5em 1em;
+  color: #fff;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  border: 5px solid #000;
+  padding: 1em;
+  text-align: center; /* Centers the text */
+  margin-top: 1em; /* Pushes the footer down so it doesn't touch the content */
+}
+
+@media (min-width: 600px) {
+  /* Makes the header content (Title + Nav) sit side-by-side */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Makes the links inside the list sit side-by-side */
+  header ul {
+    display: flex;
+    gap: 20px;
+    /* Adds space between links */
+  }
+
+  /* Removes the top border from mobile view to make it cleaner */
+  header a {
+    border-top: none;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+  }
+
+  .sidebar {
+    margin-top: 1em;
+  }
+
+  body {
+    font: 1.2em / 1.5 sans-serif;
+  }
+  .cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  .cards li {
+    border: 1px solid #666666;
+    padding: 10px;
+  }
+}
